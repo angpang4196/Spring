@@ -1,11 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+
+<sql:setDataSource var="addrDataSource"
+	driver="oracle.jdbc.driver.OracleDriver"
+	url="jdbc:oracle:thin:@localhost:1521:xe" user="mybts" password="1234" />
+
+<sql:query dataSource="${addrDataSource}" var="addrList">
+	SELECT * FROM tbl_addr WHERE ad_num = ?
+	<sql:param value="${param.ad_num}"/>
+</sql:query>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>주소록 입력</title>
  <style>
+ 	body {
+ 	}
  	
  	fieldset {
  		width : 630px;
@@ -64,19 +79,28 @@
 	</header>
 
 	<section>
-		<form action = "/sp003/controller/addr_insert.jsp">
+		<c:choose>
+			<c:when test="${empty param.ad_num}">
+				<form action = "/sp003/controller/addr_insert.jsp">
+			</c:when>
+		
+			<c:otherwise>
+				<form action = "/sp003/controller/addr_update.jsp">
+			</c:otherwise>
+		</c:choose>
+	
 		<fieldset>
-		<legend>주소 입력</legend>
+		<legend>주소 입력2</legend>
 		<!-- 학번, 이름, 전화번호, 주소, 상세주소 -->
 		
 		<label form="ad_num">학번</label>
-		<input type="text" id="ad_num" name="ad_num"/><br>
+		<input type="text" id="ad_num" name="ad_num" value="${addrList.rows[0].ad_num}"/><br>
 		
 		<label form="ad_name">이름</label>
-		<input type="text" id="ad_name" name="ad_name"/><br>
+		<input type="text" id="ad_name" name="ad_name" value="${addrList.rows[0].ad_name}"/><br>
 		
 		<label form="ad_tel">전화번호</label>
-		<input type="text" id="ad_tel" name="ad_tel"/><br>
+		<input type="text" id="ad_tel" name="ad_tel" value="${addrList.rows[0].ad_tel}"/><br>
 		
 		<label form="ad_addr1">주소</label>
 		<select id="ad_addr1" name="ad_addr1">
@@ -88,7 +112,7 @@
 		</select><br>
 		
 		<label form="ad_addr2">상세주소</label>
-		<input type="text" id="ad_addr2" name="ad_addr2"/ size="30"><br>
+		<input type="text" id="ad_addr2" name="ad_addr2"/ size="30" value="${addrList.rows[0].ad_addr2}"><br>
 		<hr />
 		<div id = "button-div">
 		<button>주소등록</button>
