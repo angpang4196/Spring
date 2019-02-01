@@ -4,17 +4,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<title>메모장</title>
+<%@ include file="/WEB-INF/include/include-head.jspf" %>
+<script>
 
-<link rel="stylesheet" href=<c:url value="/css/memo_main.css" /> >
+$(function(){
+	
+	// memoROW로 등록된 class가 클릭되면...
+	$(".memoROW").click(function(){
+		
+		// 클릭된 this(tr)에 숨어있는 data-memo-id 값을 추출해서
+		// id 변수에 담아라
+		var id = $(this).attr("data-memo-id")
+		
+		// id값은 DB에서 추출한 레코드의 PK 값이 된다.
+		// alert(id + " 번 메모를 선택함")
+		
+		location.href = "${pageContext.request.contextPath}/memo_view?MSG=&id=" + id
+	})
+})
+
+</script>
 </head>
 <body>
 	<%@ include file="/WEB-INF/include/include-header.jspf"%>
 	<section>
-		
+		<table>
+			<tr>
+				<th>NO</th>
+				<th>작성일자</th>
+				<th>작성자</th>
+				<th>제목</th>
+			</tr>
+
+			<c:choose>
+
+				<c:when test="${empty MEMOS}">
+					<tr>
+						<td colspan="4">메모가 없습니다</td>
+					</tr>
+				</c:when>
+
+				<c:otherwise>
+					<c:forEach items="${MEMOS}" var="memoVO" varStatus="i">
+						<tr class="memoROW" data-memo-id="${memoVO.id}">
+							<td>${i.count}</td>
+							<td>${memoVO.m_date}</td>
+							<td>${memoVO.m_auth}</td>
+							<td>${memoVO.m_subject}</td>
+						</tr>
+					</c:forEach>
+				</c:otherwise>
+			</c:choose>
+
+		</table>
 	</section>
 
 	<footer>
