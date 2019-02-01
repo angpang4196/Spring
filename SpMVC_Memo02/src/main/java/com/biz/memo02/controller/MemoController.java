@@ -28,6 +28,7 @@ public class MemoController {
 		List<MemoVO> memoList = memoService.selectAll();
 		
 		model.addAttribute("MEMOS", memoList);
+		model.addAttribute("BODY","LIST");
 		
 		return "home";
 	}
@@ -42,14 +43,17 @@ public class MemoController {
 		
 		model.addAttribute("MSG", MSG);
 		model.addAttribute("MEMO", vo);
+		model.addAttribute("BODY","VIEW");
 		
-		return "memo_view";
+		return "home";
 	}
 	// 폼을 열 때 사용할 requestPath
 	// 메뉴에서 메모작성을 클릭하면 호출될 requestPath
 	@RequestMapping(value = "memo", method = RequestMethod.GET)
-	public String memo() {
-		return "memo_write";
+	public String memo(Model model) {
+		
+		model.addAttribute("BODY","WRITE");
+		return "home";
 	}
 	
 	// 폼으로부터 데이터를 전달받을 때 사용할 requestPath
@@ -69,10 +73,11 @@ public class MemoController {
 			resPath = "redirect:memo_home";
 		}else {
 			retMsg = "데이터 추가 오류";
-			resPath = "memo_write";
+			resPath = "home";
 		}
 		
 		model.addAttribute("MESSAGE", retMsg);
+		model.addAttribute("BODY","WRITE");
 		return resPath;
 	}
 	
@@ -81,7 +86,8 @@ public class MemoController {
 		MemoVO vo = memoService.getMemo(id);
 		
 		model.addAttribute("MEMO", vo);
-		return "memo_write";
+		model.addAttribute("BODY","WRITE");
+		return "home";
 	}
 	
 	@RequestMapping("memo_delete")
