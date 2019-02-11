@@ -1,13 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:set var = "rootPath" value = "${pageContext.request.contextPath}" />
 <header>
 	<h1>나의 메모장</h1>
 </header>
 
 <nav class="w3-blue">
+	<%
+		/*
+			c:set tag를 사용하여 rootPath 변수를 선언하고 
+			이후 페이지에서는 pageContext.request.contextPath 대신에
+			rootPath라는 변수로 대치한다.
+		*/
+	%>
 	<a href="${pageContext.request.contextPath}"class="w3-button w3-blue w3-hover-light-gray">Home</a> 
 	<a href=<c:url value="/memo"/> class="w3-button w3-blue w3-hover-light-gray">메모작성</a> 
 	<a href="#" class="w3-button w3-blue w3-hover-light-gray">로그인</a> 
-	<a href="#" class="w3-button w3-blue w3-hover-light-gray">회원가입</a> 
+	<a href="${rootPath}/member" class="w3-button w3-blue w3-hover-light-gray">회원가입</a> 
 	<a href="#" class="w3-button w3-blue w3-hover-light-gray">About</a>
 </nav>

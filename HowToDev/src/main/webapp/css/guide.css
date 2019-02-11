@@ -1,0 +1,45 @@
+@charset "UTF-8";
+section{
+	position: relative;
+}
+#Gbanner{
+	width:100%;
+	position: absolute;
+	background-color: #819FF7;
+	top:0px;
+	font-size: 40pt;
+	padding: 0.5em;
+	color:#424242;
+	font-family: 'Indie Flower', cursive;
+}
+#menu{
+	position: absolute;
+	top:140px;
+	width:300px;
+	height: 1000px;
+	background-color:#819FF7;
+
+}
+#menu a{
+	display: inline-block;
+	width:300px;
+	border:none;
+	text-decoration: none;
+	font-size:25px;
+	padding:8px 16px;		
+	color:white;
+}
+#menu a:hover{
+	background-color:#A4A4A4;
+}
+#readbox{
+	position:absolute;
+	top:140px;
+	left: 305px;
+	width:1218px;
+	height: 1000px;
+	background-color: white;
+	border: 10px solid #819FF7;
+	overflow: hidden auto;
+	margin-bottom: 100px;
+}

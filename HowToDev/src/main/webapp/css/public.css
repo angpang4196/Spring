@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/*------------공용 CSS---------------*/
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body {
+	max-width: 80%;
+	margin: 10px auto;
+	background-image: url("/img/main.png");
+}
+
+section {
+	text-align: center;
+}
+
+header {
+	text-align: center;
+}
+
+#headerA {
+	text-decoration: none;
+	color: #FFBF00;
+}
+
+#headerA:hover {
+	color: #D0A9F5;
+}
+
+#mainText {
+	font-family: 'Indie Flower', cursive;
+	font-size: 40pt;
+	margin-top: 0px;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+#subText {
+	margin-top: 0px;
+	color: white;
+	font-size: 14pt;
+	position: absolute;
+	top: 70px;
+	left: 825px;
+}
+
+footer {
+	text-align: center;
+	color: white;
+	font-family: 'Indie Flower', cursive;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+/*------------공용 CSS---------------*/

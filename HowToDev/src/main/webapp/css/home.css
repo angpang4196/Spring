@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/*********************배너 CSS************************/
+#banner {
+	display: block;
+	width: 1523px;
+	font-size: 30pt;
+	padding: 10px;
+	color: #FFBF00;
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	margin-bottom: 10px;
+	background-image: url("/img/banner.png");
+}
+
+#banner:hover {
+	color: #FF8000;
+}
+/*********************에러코드 CSS*********************/
+#allbox { /*에러코드박스 , 툴가이드박스, 커스텀아이디박스를 감사고있는 div*/
+	/*text-align: center; /*안에 있는 박스들을 가운대로 나열하기위한 text-align:center*/
+	width: 1523px;
+	margin: 20px auto;
+	position: relative; /*ERbox를 위에 배치하기 위한 포지션*/
+}
+
+#all1 {
+	position: relative;
+	width: 768px;
+	height: 450px;
+	left: -12px;
+}
+
+#all2 {
+	position: relative;
+	width: 360px;
+	height: 450px;
+	left: 0px;
+}
+
+#all3 {
+	left: 12px;
+	position: relative;
+	width: 360px;
+	height: 450px;
+}
+
+map {
+	background-color: black;
+}
+
+.boxcollection { /*에러코드박스, 툴가이드박스, 커스텀아이디박스의 간격을 조정*/
+	
+}
+
+#ERbox { /*에러코드박스위치에 form을 위치하기위한 부분 top:0*/
+	top: 0px;
+	width: 768px;
+	height: 500px;
+	position: absolute; /*allbox에 속해있는 포지션*/
+}
+
+#ERbox #Text { /*ERbox에 사용하기위한 메인문구 디자인, 
+ 이 문구만 폰트를 사용하기위해 일부러 text2와 스타일을 나눔*/
+	width: 100%; /*ERbox에 margin을 기준으로 100%만큼 width를 줌*/
+	height: 50px;
+	font-family: 'Indie Flower', cursive; /*링크로 받은 폰트사용*/
+	font-size: 40pt;
+	margin: 0 auto; /*밑의 Text2와의 간격을 좁히기 위해 margin:0으로 설정*/
+	color: white;
+}
+
+#mainText1:hover { /*문구위에 마우스가올라가면 밑에지정한 색깔로 바뀜*/
+	color: #A5DF00;
+}
+
+#ERbox #Text2 { /*ERbox에 사용하기위한 서브문구 디자인*/
+	width: 100%; /*ERbox에 margin을 기준으로 100%만큼 width를 줌*/
+	margin: 0px auto; /*위에 메인문구와의 간격을 좁히기 위한 margin을 줌*/
+	color: white;
+	font-size: 14pt;
+}
+
+#ERbox select, input { /**/
+	width: 200px;
+	height: 50px;
+	font-size: 12pt;
+	border: 2px solid #FACC2E;
+}
+
+#ERbox h3, h4 {
+	margin: 0 auto;
+}
+
+#ERbox button {
+	width: 50px;
+	height: 50px;
+	border: 2px solid #FACC2E;
+	background-color: #FE9A2E;
+	color: white;
+}
+
+#ERbox label {
+	color: #FE642E;
+	font-size: 13pt;
+}
+
+#ERbox label:hover {
+	color: #FA5858;
+}
+
+#ERbox div {
+	margin-top: 10px;
+	margin-left: 5px;
+	width: 750px;
+	height: 300px;
+	background-color: white;
+	border: 2px solid #FACC2E;
+}
+
+/*********************다운로드박스 CSS*********************/
+section div {
+	text-align: center;
+}
+
+#TCbox {
+	margin-bottom: 0px;
+	width: 1523px;
+	height: 655px;
+	background-color: #278145;
+	position: relative;
+	overflow: hidden auto;
+	border: 3px solid #278145;
+}
+
+#main {
+	display: block;
+	width: auto;
+	background-color: #278145;
+	color: white;
+	font-size: 20pt;
+}
+
+label {
+	color: white;
+}
+
+h1 {
+	margin: 0 auto;
+	font-family: 'Indie Flower', cursive;
+}
+
+h1:hover {
+	color: #688A08;
+}
+
+.downbox {
+	margin: 8px auto;
+	display: block;
+	width: 150px;
+	padding: 8px 16px;
+	color: white;
+	text-decoration: none;
+	background-color: #FF8000;
+}
+
+.downbox:hover {
+	background-color: #FFBF00;
+}
+
+.toolbox {
+	width: 299px;
+	height: 300px;
+	background-color: #2A5338;
+	border-right: 2px dotted #278145;
+	border-bottom: 2px dotted #278145;
+	position: relative;
+	float: left;
+}
+
+.toolbox img {
+	margin-top: 20px;
+	width: 100px;
+	height: 100px;
+}
