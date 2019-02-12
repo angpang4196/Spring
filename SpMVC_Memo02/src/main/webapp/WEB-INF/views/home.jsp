@@ -21,10 +21,20 @@
 		<c:if test="${BODY == 'WRITE' }">
 			<%@ include file="/WEB-INF/views/body/memo_write.jspf"%>
 		</c:if>
-		
+
 		<c:if test="${BODY == 'MEMBER_JOIN' }">
 			<%@ include file="/WEB-INF/views/body/member_write.jspf"%>
 		</c:if>
+
+		<c:if test="${BODY == 'MEMBER-VIEW' }">
+			<%@ include file="/WEB-INF/views/body/member_view.jspf"%>
+		</c:if>
+		
+		<c:if test="${BODY == 'LIST' }">
+			<%@ include file="/WEB-INF/views/body/login-form.jspf"%>
+		</c:if>
+
+		
 	</section>
 
 	<footer>

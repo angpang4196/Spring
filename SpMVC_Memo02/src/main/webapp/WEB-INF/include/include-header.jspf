@@ -15,8 +15,19 @@
 		*/
 	%>
 	<a href="${pageContext.request.contextPath}"class="w3-button w3-blue w3-hover-light-gray">Home</a> 
+	
 	<a href=<c:url value="/memo"/> class="w3-button w3-blue w3-hover-light-gray">메모작성</a> 
-	<a href="#" class="w3-button w3-blue w3-hover-light-gray">로그인</a> 
-	<a href="${rootPath}/member" class="w3-button w3-blue w3-hover-light-gray">회원가입</a> 
+	
+	<c:if test="${empty LOGIN}">
+		<a href="#" id="login" class="w3-button w3-blue w3-hover-light-gray">로그인</a> 
+		
+		<a href="${rootPath}/member" class="w3-button w3-blue w3-hover-light-gray">회원가입</a> 
+	</c:if>
+	
+	<c:if test="${LOGIN ne null }">
+		<a>"${LOGIN.m_name}"님 환영합니다.</a>
+		<a href="${rootPath}/logout">로그아웃</a>	
+	</c:if>
+	
 	<a href="#" class="w3-button w3-blue w3-hover-light-gray">About</a>
 </nav>

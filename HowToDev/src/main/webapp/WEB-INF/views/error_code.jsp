@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-
 <html>
 <head>
 	<meta charset="utf-8">
@@ -33,15 +32,16 @@
 		<div id="ERbox">		
 		<h1 id="Text">Error Code!</h1>
 		<h2 id="Text2">오류코드를 검색하고 문제를 해결하세요</h2>
-			<form action="error" method="POST">
-				<select>
-					<option value="">해당 툴을 선택해주세요</option>
-					<option value="">Eclipse</option>
-					<option value="">Oracle</option>
-					<option value="">python</option>
-				</select> 
-				<input name="er_code" placeholder="코드를 입력하세요" />
-				<button id="er_btn">검색</button>
+			<form>
+				<h3>에러코드 : ${ERROR.or_er_code}</h3>
+				<h3>에러명</h3>
+				<h2>${ERROR.or_er_stanSql}</h2>
+				<h3>에러 원인</h3>
+				<h2>${ERROR.or_er_cause}</h2>
+				<h3>에러 조치</h3>
+				<h2>${ERROR.or_er_action}</h2>
+				
+				<button>검색</button>
 				<br />
 				<div placeholder="오류 코맨트"></div>
 			</form>		
