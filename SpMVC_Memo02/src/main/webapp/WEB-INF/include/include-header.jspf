@@ -25,7 +25,7 @@
 	</c:if>
 	
 	<c:if test="${LOGIN ne null }">
-		<a>"${LOGIN.m_name}"님 환영합니다.</a>
+		<a>"${LOGIN.m_name}" 님 환영합니다.</a>
 		<a href="${rootPath}/logout">로그아웃</a>	
 	</c:if>
 	

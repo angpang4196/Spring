@@ -24,8 +24,8 @@
 		<!--에러코드, 가이드, 커스텀박스묶음-->            
         <div id="allbox">
        	<img src="${pageContext.request.contextPath}/img/ERcode.png" id="all1"class="boxcollection" alt="에러코드박스" > 
-		<img src="${pageContext.request.contextPath}/img/guide.png" id="all2" class="boxcollection" alt="가이드박스" usemap="#boxlink">
-		<img src="${pageContext.request.contextPath}/img/custom.png" id="all3" class="boxcollection" alt="커스텀아이디박스" usemap="#boxlink">
+		
+		
 		<map id="map" name="boxlink">
 			<area shape="rect" coords="500,500,0,0" href="guide.html">
 		</map>
@@ -33,87 +33,18 @@
 		<h1 id="Text">Error Code!</h1>
 		<h2 id="Text2">오류코드를 검색하고 문제를 해결하세요</h2>
 			<form>
-				<h3>에러코드 : ${ERROR.or_er_code}</h3>
-				<h3>에러명</h3>
-				<h2>${ERROR.or_er_stanSql}</h2>
-				<h3>에러 원인</h3>
-				<h2>${ERROR.or_er_cause}</h2>
-				<h3>에러 조치</h3>
-				<h2>${ERROR.or_er_action}</h2>
-				
-				<button>검색</button>
-				<br />
-				<div placeholder="오류 코맨트"></div>
+				<div placeholder="오류 코맨트">
+					<h3>에러코드 : ${ERROR.or_er_code}</h3>
+					<h3>에러명</h3>
+					<h2>${ERROR.or_er_stanSql}</h2>
+					<h3>에러 원인</h3>
+					<h2>${ERROR.or_er_cause}</h2>
+					<h3>에러 조치</h3>
+					<h2>${ERROR.or_er_action}</h2>
+				</div>
 			</form>		
 			</div>
 		</div>
-	    <!--ToolsCollection Box 시작-->
-		<div id="TCbox">
-			<div id="main">
-				</h2>
-				<h1>Tools Collection</h1>
-			</div>
-			<div id="icon5" class="toolbox">
-				<img src="${pageContext.request.contextPath}/img/Java.png"> 
-				<label><h3>Java-Tool</h3></label> <a class="downbox"
-					href="http://mirrors.xmission.com/eclipse/oomph/epp/2018-12/R/eclipse-inst-win64.exe">Download64bit</a>
-				<a class="downbox" href="#">Site Link</a>
-			</div>
-			<div id="icon1" class="toolbox">
-				<img src="${pageContext.request.contextPath}/img/logo-eclipse.png">
-				<label><h3>Eclipse IDE 2018‑12</h3></label> <a class="downbox"
-					href="http://mirrors.xmission.com/eclipse/oomph/epp/2018-12/R/eclipse-inst-win64.exe">Download64bit</a>
-				<a class="downbox" href="#">Site Link</a>
-			</div>
-			<div id="icon2" class="toolbox">
-				<img src="${pageContext.request.contextPath}/img/Spring.svg">
-				<label><h3>Spring Tools 4</h3></label> <a class="downbox"
-					href="http://download.springsource.com/release/STS4/4.1.1.RELEASE/dist/e4.10/spring-tool-suite-4-4.1.1.RELEASE-e4.10.0-win32.win32.x86_64.zip">
-					Download64bit</a> <a class="downbox" href="#">Site Link</a>
-			</div>
-			<div id="icon3" class="toolbox">
-				<img src="${pageContext.request.contextPath}/img/developer.png">
-				<label><h3>SQL-Developer</h3></label> <a class="downbox"
-					href="http://mirrors.xmission.com/eclipse/oomph/epp/2018-12/R/eclipse-inst-win64.exe">Download64bit</a>
-				<a class="downbox" href="#">Site Link</a>
-			</div>
-			<div id="icon4" class="toolbox">
-				<img src="${pageContext.request.contextPath}/img/mysql.png">
-				<label><h3>MySQL</h3></label><a class="downbox"
-					href="http://mirrors.xmission.com/eclipse/oomph/epp/2018-12/R/eclipse-inst-win64.exe">Download64bit</a>
-				<a class="downbox" href="#">Site Link</a>
-			</div>
-			<div id="icon5" class="toolbox">
-				<img src="${pageContext.request.contextPath}/img/sub.png">
-				<label><h3>SublimeText</h3></label> <a class="downbox"
-					href="http://mirrors.xmission.com/eclipse/oomph/epp/2018-12/R/eclipse-inst-win64.exe">Download64bit</a>
-				<a class="downbox" href="#">Site Link</a>
-			</div>
-			<div id="icon6" class="toolbox">
-				<img src="${pageContext.request.contextPath}/img/sub.png">
-				<label><h3>SublimeText</h3></label> <a class="downbox"
-					href="http://mirrors.xmission.com/eclipse/oomph/epp/2018-12/R/eclipse-inst-win64.exe">Download64bit</a>
-				<a class="downbox" href="#">Site Link</a>
-			</div>
-			<div id="icon7" class="toolbox">
-				<img src="${pageContext.request.contextPath}/img/sub.png">
-				<label><h3>SublimeText</h3></label> <a class="downbox"
-					href="http://mirrors.xmission.com/eclipse/oomph/epp/2018-12/R/eclipse-inst-win64.exe">Download64bit</a>
-				<a class="downbox" href="#">Site Link</a>
-			</div>	
-			<div id="icon8" class="toolbox">
-				<img src="${pageContext.request.contextPath}/img/sub.png">
-				<label><h3>SublimeText</h3></label> <a class="downbox"
-					href="http://mirrors.xmission.com/eclipse/oomph/epp/2018-12/R/eclipse-inst-win64.exe">Download64bit</a>
-				<a class="downbox" href="#">Site Link</a>
-			</div>
-			<div id="icon9" class="toolbox">
-				<img src="${pageContext.request.contextPath}/img/sub.png">
-				<label><h3>SublimeText</h3></label> <a class="downbox"
-					href="http://mirrors.xmission.com/eclipse/oomph/epp/2018-12/R/eclipse-inst-win64.exe">Download64bit</a>
-				<a class="downbox" href="#">Site Link</a>
-			</div>		
-		  </div>
 	</section>
 	<!--footer/만든이-->
 	<footer>
