@@ -31,6 +31,12 @@ public class DevController {
 
 		return "guide";
 	}
+	
+	@RequestMapping(value = "guide", method = RequestMethod.GET)
+	public String guideTool1() {
+
+		return "guide";
+	}
 
 	@RequestMapping(value = "tools", method = RequestMethod.POST)
 	public String downLoad() {
