@@ -20,11 +20,46 @@ public class DevController {
 	public String searchErInfo(Model model, @Param("or_er_code") String or_er_code) {
 
 		Ora_ErrorVO vo = devService.findByCode(or_er_code);
-		System.out.println(or_er_code);
 
 		model.addAttribute("ERROR", vo);
 
-		return "error_code";
+		return "code";
+	}
+
+	@RequestMapping(value = "guide", method = RequestMethod.POST)
+	public String guideTool() {
+
+		return "guide";
+	}
+
+	@RequestMapping(value = "tools", method = RequestMethod.POST)
+	public String downLoad() {
+
+		return "tools";
+	}
+	
+	@RequestMapping(value = "guide_eclipse", method = RequestMethod.GET)
+	public String guide_eclipse() {
+		
+		return "guide_eclipse";
+	}
+	
+	@RequestMapping(value = "guide_data", method = RequestMethod.GET)
+	public String guide_data() {
+		
+		return "guide_data";
+	}
+	
+	@RequestMapping(value = "guide_spring", method = RequestMethod.GET)
+	public String guide_spring() {
+		
+		return "guide_spring";
+	}
+	
+	@RequestMapping(value = "guide_mysql", method = RequestMethod.GET)
+	public String guide_mysql() {
+		
+		return "guide_mysql";
 	}
 
 }

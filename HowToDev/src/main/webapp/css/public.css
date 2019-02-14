@@ -1,56 +1,44 @@
-@charset "UTF-8";
-/*------------공용 CSS---------------*/
-* {
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
+@charset "UTF-8";	
 
-body {
-	max-width: 80%;
-	margin: 10px auto;
-	background-image: url("/dev/img/main.png");
-}
-
-section {
-	text-align: center;
-}
-
-header {
-	text-align: center;
-}
-
-#headerA {
-	text-decoration: none;
-	color: #FFBF00;
-}
-
-#headerA:hover {
-	color: #D0A9F5;
-}
-
-#mainText {
-	font-family: 'Indie Flower', cursive;
-	font-size: 40pt;
-	margin-top: 0px;
-	margin-bottom: 30px;
-	position: relative;
-}
-
-#subText {
-	margin-top: 0px;
-	color: white;
-	font-size: 14pt;
-	position: absolute;
-	top: 70px;
-	left: 825px;
-}
-
-footer {
-	text-align: center;
-	color: white;
-	font-family: 'Indie Flower', cursive;
-	margin-bottom: 20px;
-	margin-top: 20px;
-}
-/*------------공용 CSS---------------*/
+	*{/*브라우저 호환을 위한 설정*/
+		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;}
+		body{
+		max-width:80%; /*body의 최대 사이즈를 80%로 설정*/
+		margin:10px auto; /*10의 간격을 주고 가운데 정렬*/
+		background-image: url("/dev/img/main.png");/*배경이미지*/
+		}
+		header{/* 상단중앙에 위치한 HowToDev아이콘 */
+			position: relative;/*header안에 absolute속성을 가진 h5를 원하는 위치에 배치하기위한 값*/
+			text-align: center;/* header안에 h1을 중앙에 배치 */
+			margin-bottom: 30px;/* 밑의 section과의 거리를 주기위해 간격을 줌 */
+		}
+		header a{
+			text-decoration: none;
+			color:#FACC2E;/* 색지정 */
+		}
+		header a:hover{
+			color:#D0A9F5;/* 색지정 */
+		}
+		header h1{		
+			padding:0px;/* padding값 0 */
+			font-size: 40pt;/* 폰트사이즈 40 */
+			font-family: 'Indie Flower', cursive;/*링크로 받아온 폰트스타일 적용 */
+			color:#FACC2E;/* 색지정 */
+		}
+		header h5{
+			position: absolute;/* header를 기준으로 이동하기위한 값지정 */
+			top:20px;/* header의 위치값을 기준으로 top 20만큼 이동 */
+			width:100%;/* header의 width값에 대한 width */
+			font-size: 20px;/* 폰트사이즈 조정 */
+			font-family: 'Sunflower', sans-serif;/*링크로 받아온 폰트스타일 적용*/
+			color: white;/* 색지정 */
+		}	
+		footer{/* 꼬리말을 적기위한 부분 */
+			text-align: center;/* 택스트 중앙위치 */
+			margin:10px;/* 간격 조절 */
+			font-family: 'Indie Flower', cursive;
+			font-size: 14pt;
+			color:white;
+		}

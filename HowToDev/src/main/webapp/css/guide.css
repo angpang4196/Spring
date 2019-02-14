@@ -1,45 +1,70 @@
 @charset "UTF-8";
-section{
-	position: relative;
-}
-#Gbanner{
-	width:100%;
-	position: absolute;
-	background-color: #819FF7;
-	top:0px;
-	font-size: 40pt;
-	padding: 0.5em;
-	color:#424242;
-	font-family: 'Indie Flower', cursive;
-}
-#menu{
-	position: absolute;
-	top:140px;
-	width:300px;
-	height: 1000px;
-	background-color:#819FF7;
+	section a{
+		text-decoration: none;
+		color:white;
+	}
 
-}
-#menu a{
-	display: inline-block;
-	width:300px;
-	border:none;
-	text-decoration: none;
-	font-size:25px;
-	padding:8px 16px;		
-	color:white;
-}
-#menu a:hover{
-	background-color:#A4A4A4;
-}
-#readbox{
-	position:absolute;
-	top:140px;
-	left: 305px;
-	width:1218px;
-	height: 1000px;
-	background-color: white;
-	border: 10px solid #819FF7;
-	overflow: hidden auto;
-	margin-bottom: 100px;
-}
+	#mainbox{
+		display: flex;
+		width: 100%;
+		margin-bottom: 0px;
+	}
+	#label1{
+		font-family: 'Staatliches', cursive;
+		font-size: 40pt;
+		color:#848484;
+		width:20%;
+		margin-left: 7%;
+		margin-bottom: 0px;
+	}
+	#label2{
+		font-family: 'Staatliches', cursive;
+		font-size: 40pt;
+		color:white;
+		width: 80%;
+		margin-left: 35%;
+		margin-bottom: 0px;
+	}
+	#label2 a:hover{
+		color:#81BEF7;
+	}
+	#subbox{
+		display: flex;
+		margin: 0px auto;
+	}
+	#menubox{
+		background-color: #A4A4A4;
+		width: 20%;
+		height: 600px;
+		border-radius:5px;
+		margin-right:10px;
+	}
+	#menubox li{
+		font-family: 'Staatliches', cursive;
+		font-size: 25pt;
+		color:gray;
+		margin-left: 60px;
+		margin-top: 30px;
+	}
+	#li1 a:hover{
+		color: #F79F81;
+	}
+	#li2 a:hover{
+		color: #FA8258;
+	}
+	#li3 a:hover{
+		color: #FF8000;
+	}
+	#li4 a:hover{
+		color: #FE642E;
+	}
+	#readbox{
+		max-width:80%; /*body의 최대 사이즈를 80%로 설정*/
+		background-color: white;
+		width: 80%;
+		height: 650px;
+		border-radius:5px;
+		border: 20px solid white;
+		text-align: center;
+		overflow: hidden auto;
+	}
