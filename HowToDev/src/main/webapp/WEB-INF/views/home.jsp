@@ -33,11 +33,11 @@
 				<form id="codetext" action="error" method="POST">	
 				<h1>Error Code</h1>
 				<h3>오류코드를 검색하고</br>문제를 해결하세요</h3>									
-					<select>
+					<select name="option">
 						<option value="">해당 툴을 선택해주세요</option>
-						<option value="">Eclipse</option>
-						<option value="">Oracle</option>
-						<option value="">MySQL</option>					
+						<option value="eclipse">Eclipse</option>
+						<option value="oracle">Oracle</option>
+						<option value="mysql">MySQL</option>					
 					</select><p><input name="or_er_code" placeholder="코드를 입력하세요" />
 					<p><button>검색</button>
 				</form>
