@@ -30,13 +30,9 @@
 			<img id="codeimg" alt=""
 				src="${pageContext.request.contextPath}/img/code.png" />
 				<div id="codetext">
-					<h1>에러코드 : ${ERROR.or_er_code}</h1>
-					<h2>에러명</h2>
-					<h4>${ERROR.or_er_stanSql}</h2>
-					<h2>에러 원인</h2>
-					<h4>${ERROR.or_er_cause}</h4>
-					<h2>에러 조치</h2>
-					<h4>${ERROR.or_er_action}</h4>
+					
+					<h1>에러명 : ${ECLIPSE.ec_er_name}</h1>
+					<h1>에러원인 : ${ECLIPSE.ec_er_cause}</h1>
 				</div>
 		</div>
 	</section>

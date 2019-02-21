@@ -97,7 +97,7 @@
 	</header>
 
 	<nav>
-		<a href="home">Home</a> <a href="product">상품검색</a> <a href="#">About</a> <button id="btn-total">합계</button>
+		<a href="home">Home</a> <a href="product">상품검색</a> <a href="#">About</a> 
 	</nav>
 
 	<section>
@@ -130,6 +130,8 @@
 		<article id="s-cart">
 
 		</article>
+		
+		<button id="btn-total">합계</button>
 	</section>
 
 	<footer>

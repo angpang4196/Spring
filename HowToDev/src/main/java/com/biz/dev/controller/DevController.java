@@ -1,5 +1,7 @@
 package com.biz.dev.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.biz.dev.service.DevService;
+import com.biz.dev.vo.EclipseVO;
 import com.biz.dev.vo.Ora_ErrorVO;
 
 @Controller
@@ -26,13 +29,15 @@ public class DevController {
 		}
 
 		if (option.equalsIgnoreCase("eclipse")) {
-
+			List<EclipseVO> ecList = devService.selectAll();
+			
+			model.addAttribute("ECLIPSE", ecList);
 		}
 
 		if (option.equalsIgnoreCase("mysql")) {
 
 		}
-		
+
 		return "code";
 	}
 
