@@ -12,6 +12,18 @@
 	<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public.css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/home.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("#option").change(function(){
+				let o =$(this).val()
+				if(o == 'eclipse') {
+					alert("아무 키나 입력 해 주세요")
+				}
+				
+			})
+		})
+	</script>
 </head>
 <body>
 	<header>
@@ -33,7 +45,7 @@
 				<form id="codetext" action="error" method="POST">	
 				<h1>Error Code</h1>
 				<h3>오류코드를 검색하고</br>문제를 해결하세요</h3>									
-					<select name="option">
+					<select id="option" name="option">
 						<option value="">해당 툴을 선택해주세요</option>
 						<option value="eclipse">Eclipse</option>
 						<option value="oracle">Oracle</option>

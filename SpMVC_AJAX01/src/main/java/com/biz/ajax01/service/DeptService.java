@@ -10,16 +10,23 @@ import com.biz.ajax01.model.DeptVO;
 
 @Service
 public class DeptService {
-	
+
 	@Autowired
-	DeptMapper dMapper ;
-	
-	public List<DeptVO> getDeptList(){
-		
+	DeptMapper dMapper;
+
+	public List<DeptVO> getDeptList() {
+
 		List<DeptVO> dList = dMapper.selectAll();
-		
+
 		return dList;
-		
+
+	}
+
+	public DeptVO getDept(String d_code) {
+
+		DeptVO deptVO = dMapper.findByDCode(d_code);
+
+		return deptVO;
 	}
 
 }

@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>나라 Plus</title>
 <link rel="stylesheet" href="<c:url value= '/css/home.css' /> ">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -16,19 +17,24 @@
 	</header>
 
 	<section class="content-container">
-		<aside class="sidebar">Side-bar</aside>
+		<aside class="sidebar">
+			<%@ include file="/WEB-INF/views/include/include-nav.jspf"%>
+		</aside>
 		<article class="main">
 
 			<div class="page-header">section header</div>
 			<div class="content">
-				<form action="dept" method="POST">
-					<div class="column sub1">
-
-						<button>조회</button>
-					</div>
-				</form>
-
-				<div class="column sub2">column</div>
+				<div class="column sub1">
+					<%@ include file="/WEB-INF/views/bodys/dept-list.jspf" %>
+				</div>
+					
+				<div class="column sub2">
+					<p>거래처코드 : <span id="d-code"></span><br />
+					거래처명 : <span id="d-name"></span><br />
+					대표자명 : <span id="d-ceo"></span>
+					<p><button id="btn-send">전송</button>
+					<p id="d-list"></p>
+				</div>
 			</div>
 
 		</article>

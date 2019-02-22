@@ -5,7 +5,7 @@ import org.apache.ibatis.jdbc.SQL;
 public class DeptSQLBuilder {
 
 	public String selectAll() {
-		SQL sql = new SQL().SELECT("*").FROM("tbl_dept");
+		SQL sql = new SQL().SELECT("*").FROM("tbl_dept").ORDER_BY("d_code");
 
 		return sql.toString();
 	}
