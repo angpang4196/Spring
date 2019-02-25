@@ -30,9 +30,7 @@ public class DeptController {
 	@RequestMapping(value = "dept", method = RequestMethod.GET)
 	public String getDeptList(Model model) {
 
-		List<DeptVO> dList = dService.getDeptList();
-
-		model.addAttribute("DEPTLIST", dList);
+		model.addAttribute("BODY","DEPT");
 
 //		int intSize = dList.size();
 //
@@ -69,6 +67,17 @@ public class DeptController {
 		DeptVO deptVO = dService.getDept(d_code);
 
 		return deptVO;
+	}
+	
+	@RequestMapping(value="dsearch", method = RequestMethod.POST)
+	public String dsearch(Model model, @RequestParam String dsearch) {
+		
+		log.debug(dsearch);
+		List<DeptVO> deptList = dService.getFindByDName(dsearch);
+		
+		model.addAttribute("DEPTLIST",deptList);
+		
+		return "bodys/dept-list";
 	}
 
 }

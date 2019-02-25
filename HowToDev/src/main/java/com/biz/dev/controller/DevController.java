@@ -25,20 +25,22 @@ public class DevController {
 		if (option.equalsIgnoreCase("oracle")) {
 			Ora_ErrorVO vo = devService.findByCode(or_er_code);
 
-			model.addAttribute("ERROR", vo);
+			model.addAttribute("ORAVO", vo);
+			return "oracle_error";
 		}
 
 		if (option.equalsIgnoreCase("eclipse")) {
 			List<EclipseVO> ecList = devService.selectAll();
 			
 			model.addAttribute("ECLIPSE", ecList);
+			return "eclipse_error";
 		}
 
 		if (option.equalsIgnoreCase("mysql")) {
 
 		}
 
-		return "code";
+		return null;
 	}
 
 	@RequestMapping(value = "guide", method = RequestMethod.POST)

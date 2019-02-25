@@ -55,7 +55,7 @@
 				</form>
 			</div>
 		</div>
-		<div id="guidebox"class="boxs">
+		<div id="guidebox" class="boxs">
 			<form id="toolText" action="guide" method="POST">
 				<img src="${pageContext.request.contextPath}/img/guidebox.png"/>
 				<h1>Guide Note</h1>
