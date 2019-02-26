@@ -18,6 +18,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/eclipse_code.css">
 </head>
+
 <body>
 	<header>
 		<h1>
@@ -31,8 +32,9 @@
 				src="${pageContext.request.contextPath}/img/code.png" />
 			<div id="codetext">
 				<c:forEach items="${ECLIPSE}" var="elist">
-					<h1>에러명 : ${elist.ec_er_name}</h1>
-					<h1>에러원인 : ${elist.ec_er_cause}</h1>
+					<h2>에러명 : ${elist.ec_er_name}</h2>
+					<h2>에러원인 : ${elist.ec_er_cause}</h2>
+					<hr/>
 				</c:forEach>
 			</div>
 		</div>

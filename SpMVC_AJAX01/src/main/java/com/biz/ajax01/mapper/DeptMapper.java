@@ -16,7 +16,7 @@ public interface DeptMapper {
 	@Select(" SELECT * FROM tbl_dept WHERE d_code = #{d_code} ")
 	public DeptVO findByDCode(String d_code);
 	
-	@Select(" SELECT * FROM tbl_dept WHERE d_name LIKE '%' || #{d_name} || '%' ORDER BY d_name ")
+	@Select(" SELECT * FROM tbl_dept WHERE d_name LIKE '%' || #{d_name} || '%' ORDER BY d_code ")
 	public List<DeptVO> findByDName(String d_name);
 	
 	@InsertProvider(type=DeptSQLBuilder.class, method = "getInsertSQL")
