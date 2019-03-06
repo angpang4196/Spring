@@ -15,5 +15,7 @@ public interface MemberDao {
 	public int update(MemberVO memberVO);
 
 	public int delete(String m_userid);
+	
+	public List<MemberVO> loginCheck(String m_userid);
 
 }
